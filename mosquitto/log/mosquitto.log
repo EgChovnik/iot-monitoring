@@ -1,0 +1,31 @@
+1743259416: mosquitto version 2.0.21 starting
+1743259416: Config loaded from /mosquitto/config/mosquitto.conf.
+1743259416: Opening ipv4 listen socket on port 1883.
+1743259416: Opening ipv6 listen socket on port 1883.
+1743259416: mosquitto version 2.0.21 running
+1743259417: New connection from 172.18.0.5:38492 on port 1883.
+1743259417: New client connected from 172.18.0.5:38492 as Telegraf-Consumer-lV4yk (p2, c1, k60).
+1743259431: New connection from 172.18.0.1:55198 on port 1883.
+1743259431: New client connected from 172.18.0.1:55198 as auto-EE99E227-A8B8-79E5-9F68-122823F8EC68 (p2, c1, k60).
+1743261217: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1743262802: Client auto-EE99E227-A8B8-79E5-9F68-122823F8EC68 disconnected.
+1743263018: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1743263085: Client Telegraf-Consumer-lV4yk disconnected.
+1743263085: mosquitto version 2.0.21 terminating
+1743263085: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1743267059: mosquitto version 2.0.21 starting
+1743267059: Config loaded from /mosquitto/config/mosquitto.conf.
+1743267059: Opening ipv4 listen socket on port 1883.
+1743267059: Opening ipv6 listen socket on port 1883.
+1743267059: mosquitto version 2.0.21 running
+1743267061: New connection from 172.18.0.5:42894 on port 1883.
+1743267061: New client connected from 172.18.0.5:42894 as Telegraf-Consumer-uOxJk (p2, c1, k60).
+1743267081: New connection from 172.18.0.1:57890 on port 1883.
+1743267081: New client connected from 172.18.0.1:57890 as auto-CBE337DE-F945-E62E-9375-7E2545DB449B (p2, c1, k60).
+1743268860: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1743270661: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1743272462: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1743272719: Client auto-CBE337DE-F945-E62E-9375-7E2545DB449B disconnected.
+1743272722: Client Telegraf-Consumer-uOxJk disconnected.
+1743272723: mosquitto version 2.0.21 terminating
+1743272723: Saving in-memory database to /mosquitto/data//mosquitto.db.
