@@ -22,11 +22,12 @@ client = mqtt.Client()
 client.connect(MQTT_BROKER, MQTT_PORT, 60)
 client.loop_start()
 
-def publish_device_data(device_id, power, status="on"):
+def publish_device_data(device_id, power):
     # Publish power consumption
     power_topic = f"{MQTT_TOPIC_PREFIX}/{device_id}/power"
     power_payload = json.dumps({
-        "value": power
+        "value": power,
+#        "timestamp": time.time()
     })
     client.publish(power_topic, power_payload)
     
