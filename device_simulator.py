@@ -10,11 +10,11 @@ MQTT_TOPIC_PREFIX = "home/energy"
 
 # Device configuration
 devices = {
-    "tv": {"name": "TV", "max_power": 150},
-    "fridge": {"name": "Refrigerator", "max_power": 200},
-    "laptop": {"name": "Laptop", "max_power": 85},
-    "smartphone": {"name": "Smartphone", "max_power": 15},
-    "lights": {"name": "Lights", "max_power": 60}
+    "tv": {"name": "TV", "max_power": 150 / 10800},
+    "fridge": {"name": "Refrigerator", "max_power": 200 / 10800},
+    "laptop": {"name": "Laptop", "max_power": 85 / 10800},
+    "smartphone": {"name": "Smartphone", "max_power": 15 / 10800},
+    "lights": {"name": "Lights", "max_power": 60 / 10800}
 }
 
 # Connect to MQTT broker
@@ -26,27 +26,15 @@ def publish_device_data(device_id, power, status="on"):
     # Publish power consumption
     power_topic = f"{MQTT_TOPIC_PREFIX}/{device_id}/power"
     power_payload = json.dumps({
-        "value": power,
-        "unit": "watts",
-        "timestamp": time.time()
+        "value": power
     })
     client.publish(power_topic, power_payload)
     
-    # Publish device status
-    status_topic = f"{MQTT_TOPIC_PREFIX}/{device_id}/status"
-    status_payload = json.dumps({
-        "status": status,
-        "timestamp": time.time()
-    })
-    client.publish(status_topic, status_payload)
-    
-    print(f"Published {device_id}: {power}W, Status: {status}")
 
 try:
     print("IoT Energy Simulator running. Press CTRL+C to exit.")
     
     while True:
-        # Simulate realistic power fluctuations for each device
         for device_id, device in devices.items():
             # Skip random devices sometimes to simulate devices being off
             if random.random() > 0.9 and device_id != "fridge":
